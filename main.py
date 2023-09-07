@@ -578,13 +578,13 @@ import string
 # Patikrinkite kiekvieną temperatūrą sąraše ir išveskite "šilta" (jei temperatūra virš 20)
 # arba "šalta" (jei temperatūra 20 ar mažiau).
 
-# temp = [15, 20, -9, 32, -24, 16]
-# x = int(input("Pasirinkite norima temperatura is saraso: "))
-# for temperatura in range(0,6):
-#      if temperatura >=20 :
-#          print ("silta")
-#      elif temperatura <=20:
-#         print ("šalta")
+temp = [15, 20, -9, 32, -24, 16]
+x = int(input("Pasirinkite norima temperatura is saraso: "))
+for x in range(1):
+    if x >20:
+        print ("silta")
+    elif x <20:
+        print ("šalta")
 
 
 
