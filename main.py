@@ -577,22 +577,23 @@ import string
 # 1. Sukurkite sąrašą temperatūros su temperatūromis.
 # Patikrinkite kiekvieną temperatūrą sąraše ir išveskite "šilta" (jei temperatūra virš 20)
 # arba "šalta" (jei temperatūra 20 ar mažiau).
-
-temp = [15, 20, -9, 32, -24, 16]
-x = int(input("Pasirinkite norima temperatura is saraso: "))
-for x in range(1):
-    if x >20:
-        print ("silta")
-    elif x <20:
-        print ("šalta")
+#
+# temp = [15, 20, -9, 32, -24, 16]
+# x = int(input("Pasirinkite norima temperatura is saraso: "))
+# for x in range(1):
+#     if x >20:
+#         print ("silta")
+#     elif x <20:
+#         print ("šalta")
 
 
 
 # 2. Turite žodyną su studentų vardais ir jų pažymiais.
 # Parašykite "for" ciklą, kuris išveda kiekvieno studento vardą ir jo pažymį.
 
+
 # zodynas = {"Petras": 8, "Maryte": 7, "Saule": 6, "Marius": 10}
-# for zodis in zodynas.items:
+# for zodis in zodynas.items():
 #     print(zodis)
 
 # 3. Sukurkite tuščią sąrašą sarasas ir leiskite vartotojui įvesti skaičius.
@@ -615,6 +616,603 @@ for x in range(1):
 #     for n in zodynas.items:
 #     naujas [gerimas] = kaina
 #     print(naujas)
+
+# jeigu nera indekso viduje grazina paskutini nuo galo, jeigu prie pop bus indeksas tad nuo priekio skaiciuojame nuo
+# vardai = ['Jonas', 'Petras', 'Marius', 'Laura']
+# pirmas_vardas = vardai.pop()
+# print(pirmas_vardas)
+
+# idedam elementa pagal nurodyta reiksme
+# vardai.insert(1, 'Giedrius')
+# print(vardai)
+# ideda varda i gala
+# vardai.append('Giedrius')
+# print(vardai)
+#
+# vardai.sort(reverse=true)
+# print(vardai)
+
+# a = ("b", "g", "a", "d", "f", "c", "h", "e")
+# x = sorted(a)
+# print(x)
+
+# vardai.remove('Laura')
+# print(vardai)
+
+# vaisiai = ('obuolys', 'kriause', 'Bananas', 'braske')
+# vaisiai1 = ['obuolys', 'kriause', 'Bananas', 'braske']
+# vaisiai = {'obuolys',
+#     'kriause',
+#     'Bananas',
+#     'braske'
+# }
+#
+# vaisiai2 = vaisiai[0]
+#     print(vaisiai2)
+
+# skaiciai = (3.14, 2.71)
+# x, y = skaiciai
+# print(x)
+# print(y)
+
+# vaisiai1 = ['obuolys', 'kriause', 'Bananas', 'braske']
+# for indeksas, vaisius in enumerate(vaisiai1, start =1):
+#     print(f"{indeksas}, {vaisius}")
+
+# with open("failo_pav.txt", 'r', encoding='utf-8') as file:
+#     for eilute in file:
+#         print(eilute.strip())
+
+# vaisiai = []
+
+# with open("vaisiai.txt", 'r', encoding='utf-8') as file:
+#     file.write('obuolys, \nkriause, \nBananas, \nbraske')
+#     vaisiai = file.readlines()
+#     print(vaisiai)
+
+# 4. Turite žodyną, kuriame saugomi gėrimų pavadinimai ir jų kainos.
+# Vartotojas įveda gėrimo pavadinimą, o jūs patikrinkite, ar tokio pavadinimo gėrimas yra žodyne.
+# Jei taip, išveskite jo kainą; jei ne, išveskite pranešimą "Gėrimas nerastas".
+
+
+# drinkas = input('Iveskite gerimo pavadinimus')
+# zodynas = {"Fanta": 2.5, "sprite": 1.5, "Cola": 4}
+# if drinkas in zodynas:
+#     kaina =  zodynas [drinkas]
+#     print(kaina)
+# else:
+#     print('tokio gerimo nerurime')
+
+
+
+
+
+# 2.
+# zodynas = {"Petras": 8, "Maryte": 7, "Saule": 6, "Marius": 10}
+# for zodis in zodynas.items():
+#     print(zodis)
+
+
+# 1. Sukurkite sąrašą temperatūros su temperatūromis.
+# Patikrinkite kiekvieną temperatūrą sąraše ir išveskite "šilta" (jei temperatūra virš 20)
+# arba "šalta" (jei temperatūra 20 ar mažiau).
+#
+
+
+# 5. Patikrinkite, ar skaičiai sąraše yra lyginiai arba nelyginiai.
+# Sukurkite du tuščius sąrašus: vienas lyginiams ir kitą nelyginiams skaičiams, išrūšiuokite lyginius ir nelyginius skaičius iš skaičiai sąrašo.
+
+
+# 1. Parašykite funkciją, kuri priimtų sąrašą studento pažymių ir grąžintų vidurkį;
+
+# Petras = [8,5,6,7]
+# Maryte = [7,5,10,9,8]
+# Saule = [6,10,10,10]
+# Marius =[10,10,2,9]
+
+
+# def mano_sarasas(sarasas):
+#    sandauga = 1
+#    for skaicius in sarasas:
+#         sandauga *= skaicius
+#    return sandauga
+# sk_sarasas = [2, 4, 6, 8, 10]
+# print('Saraso skaiciu sandauga lygi:',mano_sarasas (sk_sarasas))
+
+# # objektinis programavimas
+# #sukuriamas klase pvz projektas
+# class Zmogus:
+#     #sukuriamas konstruktorius apibrezimas ko nori
+#     def __init__(self,vardas, amzius):
+#         self.vardas = vardas
+#         self.amzius = amzius
+#         #kuriami metodai
+#
+#     def sveikinimas(self):
+#         return f"Sveiki, as esu {self.vardas} ir man yra {self.amzius} metu"
+#
+# #sukuriamas objektas
+#
+# zmogus1 = Zmogus("Jonas", 30)
+# zmogus2 = Zmogus("Antanas", 45)
+#
+# print(zmogus1.sveikinimas())
+# print(zmogus2.sveikinimas())
+
+# class Automobilis:
+#     def __init__(self, marke, modelis):
+#         self.marke = marke
+#         self.modelis = modelis
+#         self.greitis = 0
+#
+#     def akseleratorius(self):
+#         self.greitis += 10
+#
+#     def stabdis (self):
+#         self.greitis -= 5
+#
+#     def info(self):
+#         return f"{self.marke} {self.modelis}, greitis: {self.greitis} km/h"
+#
+# auto1= Automobilis("Mazda", "323")
+# auto1.akseleratorius()
+# auto1.akseleratorius()
+# auto1.akseleratorius()
+# auto1.stabdis()
+#
+# print(auto1.info())
+#
+# class Knyga:
+#
+#     def __init__(self, pavadinimas, autorius, leidimo_metai):
+#         self.pavadinimas = pavadinimas
+#         self.autorius = autorius
+#         self.leidimo_metai = leidimo_metai
+#
+#     def info(self):
+#             return f"Knygos pavadinimas {self.pavadinimas}, Autorius: {self.autorius}, leidimo_metai: {self.leidimo_metai}"
+#
+# knyga = Knyga("Visi norejo testo", "Studentas",2023)
+# print(knyga.info())
+#
+# class Preke:
+#
+#     def __init__(self, pavadinimas, kaina):
+#         self.pavadinimas = pavadinimas
+#         self.kaina = kaina
+#     def info(self):
+#         return f"{self.pavadinimas}: {self.kaina} Eur"
+#
+# class Krepselis:
+#
+#     def __init__(self):
+#
+#         self.prekes = []
+#
+#     def ideti_preke(self, preke):
+#         self.prekes.append(preke)
+#
+#     def krepselio_info(self):
+#         if not self.prekes:
+#             print('tokios prekes nera')
+#         else:
+#             print("krepselio turinys:")
+#             for preke in self.prekes:
+#                 print(preke.info())
+#
+#     def bendra_suma(self):
+#         suma = sum(preke.kaina for preke in self.prekes)
+#         return suma
+#
+# krepsys = Krepselis()
+# preke1 = Preke('obuolys', 5.0)
+# preke2 = Preke('bananas', 2.0)
+# preke3 = Preke('vanduo', 1.3)
+# preke4 = Preke ('kava', 10.5)
+#
+# krepsys.ideti_preke(preke1)
+# krepsys.ideti_preke(preke2)
+# krepsys.ideti_preke(preke3)
+# krepsys.ideti_preke(preke4)
+# krepsys.ideti_preke(preke4)
+#
+# krepsys.krepselio_info()
+#
+# print(f"bendra suma : {krepsys.bendra_suma()} Eur")
+#
+# Sukurkite klasę "Saskaita", kuri turėtų šias savybes ir metodus:
+#
+#     * saskaitos_nr: sąskaitos numeris.
+#     * balansas: sąskaitos balansas (numatytasis pradžioje yra 0).
+#     * inesti(suma): metodas, kuris prideda nurodytą sumą prie sąskaitos balanso.
+#     * isimti(suma): metodas, kuris sumažina sąskaitos balansą nurodyta suma,
+# jei yra pakankamai lėšų, arba išveda pranešimą apie nepakankamą balansą.
+#     * informacija(): metodas, kuris grąžina informaciją apie sąskaitą (sąskaitos numeris ir balansas).
+#
+# Sukurkite bent du objektus pagal šią klasę ir atlikite operacijas,
+# tokiu kaip lėšų įnešimas ir išėmimas, bei gaukite sąskaitos informaciją.
+#
+# class Saskaita:
+#     def __init__(self, saskaitos_numeris, balansas):
+#
+#         self.saskaitos_numeris = saskaitos_numeris
+#
+#     def info(self):
+#         return f"{self.saskaitos_numeris}:"
+#
+# class Balansas:
+#     def __init__(self):
+#
+#             self.balansas = 0
+#
+#         def inesti_suma(self):
+#             self.balansas =int(input "Inesimo suma")
+#             self.balansas += suma
+#             if self.balansas >= balansas:
+#                 self.balansas -= balansas
+#                 print("Balansas pakankamas:")
+#             else:
+# #                 print('Nepakanka pinigu')
+# #
+# class Saskaita:
+#     def __init__(self, saskaitos_numeris):
+#
+#         self.saskaitos_numeris = saskaitos_numeris
+# class Balansas:
+#     def __init__(self):
+#         self.balansas = 0
+#
+#     def lesu_inesimas(self):
+#         self.balansas = float(input("iveskite suma: "))
+#         self.balansas += balansas
+#         print("Balanso likutis: ", balansas)
+#
+#     def lesu_isemimas(self):
+#         self.balansas = float(input("isimti suma: "))
+#         if self.balansas >= balansas:
+#             self.balansas -= balansas
+#             print("isimti suma: ", balansas)
+#         else:
+#             print("nepankamas balansas ")
+#
+#     def informacija(self):
+#         print("Saskaitos numeris", self.balansas)
+#
+# saskaita1 = Saskaita("LT2222258")
+# balansas1 = Balansas()
+# saskaita1.balansas = balansas1
+# balansas1.lesu_inesimas()
+# balansas1.lesu_isemimas()
+
+#
+# saskaita1.informacija()
+
+# class Studentas:
+#     def __init__(self, st_vardas):
+#         self.st_vardas = st_vardas
+#         self.pazymiai = []
+#     def prideti_pazymi(self, pazymys):
+#         self.pazymiai.append(pazymys)
+#     def vidurkis(self):
+#         if not self.pazymiai:
+#             return 0
+#         return sum(self.pazymiai) / len(self.pazymiai)
+#
+# class Mokytojas:
+#     def __init__(self, mokytojo_vardas, destomas_dakykas):
+#         self.mokytojo_vardas = mokytojo_vardas
+#         self.destomas_dalykas = destomas_dakykas
+#     def ivertinimas(self, studentas, pazymys):
+#         studentas.prideti_pazymi(pazymys)
+#
+# studentas1=Studentas('Petras')
+# mokytojas1=Mokytojas('Jurgis', 'informatika')
+#
+# mokytojas1.ivertinimas(studentas1, 3)
+#
+# print(f'{studentas1.st_vardas}, vidurkis: {studentas1.vidurkis()}')
+
+#
+# def pasveikinimas(vardas):
+#     sveikinimas = f"Sveiki, {vardas}"
+#     return sveikinimas
+#
+# vardas = input("Iveskite savo varda:")
+# sveikinimas = pasveikinimas(vardas)
+# print(sveikinimas)
+#
+# def ar_lyginis(skaicius):
+#     if skaicius % 2 == 0:
+#         return True
+#     else:
+#         return False
+#
+# skaicius = 7
+# if ar_lyginis(skaicius):
+#     print(f"{skaicius} yra lyginis")
+# else:
+#     print(f"{skaicius} yra nelyginis")
+
+#
+# def suma (a,b):
+#     rezultatas = a + b
+#     return rezultatas
+#
+# x= 5
+# y= 3
+# sumos_rezultatas = suma(x, y)
+# print(f"{x} + {y} = {sumos_rezultatas} ")
+
+
+# def suma ():
+#     rezultatas = 5 + 3
+#     return rezultatas
+#
+# x= 5
+# y= 3
+# sumos_rezultatas = suma(x, y)
+# print(f"{x} + {y} = {sumos_rezultatas} ")
+
+
+# def pasisveikinimas():
+#     sveikinimas = f"Sveiki, Diana"
+#     return sveikinimas
+#
+# if __name__ == "__main__":
+#     main()
+
+
+# def vidurkis(skaiciai):
+#     suma = sum(skaiciai)
+#     avg = suma / len(skaiciai)
+#     return avg
+#
+# sarasas = [5,6,10,15,20,25,30]
+# rezultatas = vidurkis(sarasas)
+# print(f"saraso vidurkis : {rezultatas}")
+
+
+# 1. patikrinti ar skaicius yra teigiamas ar neigiamas#
+#
+# def ar_teigiamas(skaicius):
+#     if skaicius > 0:
+#         return True
+#     else:
+#         return False
+#
+# skaicius = 4
+# if ar_teigiamas (skaicius):
+#     print(f"{skaicius} yra teigiamas")
+# else:
+#     print(f"{skaicius} yra neigiamas")
+
+# 2. surasti didziausia skaicius sarase
+#
+# def didz_skaicius(skaicius):
+#     didziausias = skaicius[0]
+#     for i in skaicius:
+#         if i > didziausias:
+#             didziausias = i
+#     return didziausias
+#
+# sarasas = [10,658,12,-2]
+# didziausias = didz_skaicius(sarasas)
+# print(f"didziausias yra {didziausias}")
+
+
+# 3. funkcija kuri sujungia du sarasus
+# def sujungti_sarasai (sarasas1, sarasas2):
+#     sujungtas_sarasas = sarasas1 + sarasas2
+#     return sujungtas_sarasas
+# s_1 = [1, 2, 3]
+# s_2 = [4, 5, 6]
+# rezultatas = sujungti_sarasai(s_1, s_2)
+# print(rezultatas)
+
+
+# 4. funkcija suras didziausius skaicius negu nurodytas mano skaicius
+#
+# def didesnis( listas, skaicius ):
+#     didesnis = [sk_1 for sk_1 in listas if sk_1 > skaicius]
+#     return didesnis
+# listas = [1, 2, 15, 101, 1005]
+# n = 8
+# didesni_sk = didesnis(listas, n)
+# print(f"sarase skaiciai didesni uz {n}: yra {didesni_sk}")
+
+# 1. Parašykite funkciją, kuri priimtų sąrašą studento pažymių ir grąžintų vidurkį;
+#
+# def studento_sarasas (pavarde, pazymiai):
+#     pazymiu_suma = sum(pazymiai)
+#     vidurkis = pazymiu_suma / len(pazymiai)
+#     return pavarde, vidurkis
+#
+#
+# list1 = [('Petras', [8.9.7]), ('Maryte', [9.9.10])]
+# list2 = []
+#
+# for studentas in studentai:
+#     pavarde, pazymiai = studentas
+#     rezultatas = studento_sarasas(pavarde, pazymiai)
+#     rezultatai.appen(rezultatas)
+#
+# for rezultatas in rezultatai:
+#     pavarde, vidurkis = rezultatas
+#     print(f'Studentas: {pavarde}, Vidurkis {vidurkis}')
+#
+# # 3. Sukurkite funkciją zodziu_kiekis(tekstas), kuri priima tekstą ir grąžina žodžių skaičių tekste.
+# # Žodžius galite laikyti atskirtais tarpais;
+#
+# def zodziu_kiekis(tekstas):
+#     zodziai = tekstas.split()
+#     return len(zodziai)
+#
+# s_1 = "Man trys metukai"
+# zodziu_skaicius = zodziu_kiekis(s_1)
+#
+# print(f"zodziu kiekis: {zodziu_skaicius}")
+#
+# Sukurkite klasę "Studentas", kuri turėtų šias savybes:
+#
+#     * vardas: studento vardas.
+#     * pazymiai: sąrašas su studento pažymiais.
+#
+# Sukurkite klasę "Mokytojas", kuri turėtų šias savybes:
+#
+#     * vardas: mokytojo vardas.
+#     * Mokytojo dėstoma tema: mokytojo dėstomas dalykas.
+#
+# Papildykite "Studentas" klasę metodu vidurkis(), kuris apskaičiuoja studento pažymių vidurkį.
+#
+# Papildykite "Mokytojas" klasę metodu ivertinimas(studentas, pazymys), kuris prideda studentui pažymį.
+#
+# Sukurkite objektus pagal "Studentas" ir "Mokytojas" klases, pridėkite pažymius ir vykdykite vidurkio apskaičiavimus bei pažymių pridėjimus.
+
+# class Studentas:
+#     def __init__(self, st_vardas):
+#         self.st_vardas = st_vardas
+#         self.pazymiai = []
+#     def prideti_pazymi(self, pazymys):
+#         self.pazymiai.append(pazymys)
+#     def vidurkis(self):
+#         if not self.pazymiai:
+#             return 0
+#         return sum(self.pazymiai) / len(self.pazymiai)
+#
+# class Mokytojas:
+#     def __init__(self, mokytojo_vardas, destomas_dakykas):
+#         self.mokytojo_vardas = mokytojo_vardas
+#         self.destomas_dalykas = destomas_dakykas
+#     def ivertinimas(self, studentas, pazymys):
+#         studentas.prideti_pazymi(pazymys)
+#
+# studentas1=Studentas('Petras')
+# mokytojas1=Mokytojas('Jurgis', 'informatika')
+#
+# mokytojas1.ivertinimas(studentas1, 3)
+#
+# print(f'{studentas1.st_vardas}, vidurkis: {studentas1.vidurkis()}')
+
+# 6. Sukurkite funkciją sarasas_suma(sarasas), kuri priima sąrašą skaičių ir suskaičiuoja jų sumą.
+# Leiskite vartotojui įvesti sąrašą skaičių ir išvesti jų sumą;
+
+# def sarasas_suma(skaiciai):
+#     suma = sum(skaiciai)
+#     return suma
+#
+# sarasas = [5,6,10,15,30,15,20,14]
+# rezultatas = sarasas_suma(sarasas)
+# print(f'saraso suma: {rezultatas}')
+
+
+
+# def sarasas_suma(skaiciai):
+#     suma = sum(skaiciai)
+#     return suma
+#
+# f = int(input "iveskite nprimus skaicius: ")
+# rezultatas = sarasas_suma(f)
+# print(f'saraso suma: {rezultatas}')
+
+# 7. Sukurkite funkciją, kuri priimtų skaičių sąrašą ir grąžintų visų sąrašo skaičių sandaugą.
+
+# def sarasas_sandauga(skaiciai):
+#     sandauga = 1
+#
+#     for i in skaiciai:
+#         sandauga *= i
+#     return sandauga
+# sk_sarasas = [2,4,6,8,10]
+# print('Saraso skaiciu sandauga lygi:',sarasas_sandauga (sk_sarasas))
+
+
+# # Sukurkite funkciją kvadrato_plotas(ilgis), kuri priima kvadrato kraštinės ilgį ir grąžina kvadrato plotą.
+# kvadrota plotas = a*2
+# def kvadrato_plotas (ilgis):
+#     plotas =  ilgis **2
+#     return plotas
+# ilgis = 4
+# plotas = kvadrato_plotas(ilgis)
+# print(f"kvadrato plotas: {plotas} ")
+
+# class Kava:
+#     def __init__(self, pavadinimas, kaina, talpa):
+#         self.pavadinimas = pavadinimas
+#         self.kaina = kaina
+#         self.talpa = talpa
+#
+#     def atitiktis_puodeliui(self, puodelio_talpa):
+#         if self.talpa <= puodelio_talpa:
+#             return f"{self.pavadinimas} kava tinka puodeliui su talpa {puodelio_talpa} ml"
+#         else:
+#             return f"{self.pavadinimas} kava netelpa {puodelio_talpa} ml"
+#
+# kava1 = Kava("Latte", 6.50, 250 )
+# puodelio_talpa = 300
+# print(kava1.atitiktis_puodeliui(puodelio_talpa))
+#
+# #  knigynas turi savybe, knygos, prideti _ieskoti ir atspausdinti visu knygu sarase
+# class Knygynas:
+#
+#     def __init__(self):
+#         self.knygos = []
+#
+#     def prideti_knyga(self,knyga):
+#         self.knygos.append((knyga))
+#
+#     def ieskoti_knygos(self,pavadinimas):
+#         for knyga in self.knygos:
+#             if knyga['pavadinimas'] == pavadinimas:
+#                 return knyga
+#         return None
+#     def knygu_sarasas(self):
+#         if not self.knygos:
+#             print('Knygynas tuscias')
+#         else:
+#             print('knygyno knygu sarasas: ')
+#             for knyga in self.knygos:
+#                 print(f"Pavadinimas: {knyga[ 'pavadinimas']}, Autorius: {knyga['autorius']}, Metai: {knyga['metai']}")
+# knigynas = Knygynas()
+# knigynas.prideti_knyga({'pavadinimas' : 'seslis', 'autorius': 'Zemaitis', 'metai': 1981})
+# ieskoma_knyga = knigynas.knygos_paieska('seslis')
+# if ieskoma_knyga:
+#     print(f'rasta knyga: {ieskoma_knyga["pavadinimas"]}')
+# else:
+#     print('knyga nerasta')
+# knigynas.knygu_sarasas()
+
+# Sukurkite klasę "Prekybininkas", kuri turi atributus "vardas" (name) ir "prekės" (items) ( prekių sąrašas).
+# Parašykite metodus, kurie leidžia pridėti prekes prie prekių sąrašo, pašalinti prekes ir paskaičiuoti prekių bendrą sumą;
+
+class Prekybininkas:
+    def __init__(self, name, items):
+        self.name = name
+        self.items = items
+class Sarasas:
+    def __init__(self):
+        self.prekiu_sarasas = []
+
+    def ideti_preke(self, prekybinikas):
+        self.prekiu_sarasas.append(prekybininkas)
+    def pasalinti_preke(self, prekybinikas):
+        self.prekiu_sarasas.remove(prekybininkas)
+
+
+prekiu_sarasas = Sarasas()
+prekybininkas1 = Prekybininkas('Petras','obuolys')
+prekybinikas2 = Prekybininkas('Saulius', 'kamuolys')
+
+prekiu_sarasas.ideti_preke(prekybininkas1)
+prekiu_sarasas.pasalinti_preke(prekybinikas2)
+
+for preke in prekiu_sarasas
+    
+
+
+
+
+
+
 
 
 
