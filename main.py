@@ -1183,36 +1183,262 @@ import string
 
 # Sukurkite klasę "Prekybininkas", kuri turi atributus "vardas" (name) ir "prekės" (items) ( prekių sąrašas).
 # Parašykite metodus, kurie leidžia pridėti prekes prie prekių sąrašo, pašalinti prekes ir paskaičiuoti prekių bendrą sumą;
+# #
+# class Prekybininkas:
+#     def __init__(self, name):
+#         self.name = name
+#         self.prekes = []
+#
+#     def prideti_preke(self, preke, kiekis =1):
+#         for _ in range(kiekis):
+#             self.prekes.append(preke)
+#
+#     def pasalinti_preke(self, preke, kiekis=1):
+#         if preke in self.prekes:
+#             for _ in range(kiekis):
+#                 self.prekes.remove(preke)
+#         else:
+#             print('tokios prekes nera')
+#
+#     def prekiu_suma(self):
+#         suma =  sum(preke[1] for preke in self.prekes)
+#         return suma
+#
+# pardavejas = Prekybininkas('Martynas')
+#
+# preke1 = ('kava', 1.0)
+# preke2 = ('obuolys', 2.5)
+# preke3 = ('kamuolys', 1.5)
+#
+# pardavejas.prideti_preke(preke1)
+# pardavejas.prideti_preke(preke2)
+# pardavejas.prideti_preke(preke3,3)
+# suma=pardavejas.prekiu_suma()
+#
+# print(suma)
+#
+# pardavejas.pasalinti_preke((preke1))
+#
+# print('prekiu sarasas: ')
+# for preke in pardavejas.prekes:
+#     print(f"{preke[0]}: {preke[1]}")
+# print(f"bendra visu prekiu suma: {suma}")
 
-class Prekybininkas:
-    def __init__(self, name, items):
-        self.name = name
-        self.items = items
-class Sarasas:
-    def __init__(self):
-        self.prekiu_sarasas = []
+# knigynas turi savybe, knygos, prideti _ieskoti ir atspausdinti visu knygu sarase
+# class Knygynas:
+#
+#     def __init__(self):
+#         self.knygos = []
+#
+#     def prideti_knyga(self,knyga):
+#         self.knygos.append((knyga))
+#
+#     def ieskoti_knygos(self,pavadinimas):
+#         for knyga in self.knygos:
+#             if knyga['pavadinimas'] == pavadinimas:
+#                 return knyga
+#         return None
+#     def knygu_sarasas(self):
+#         if not self.knygos:
+#             print('Knygynas tuscias')
+#         else:
+#             print('knygyno knygu sarasas: ')
+#             for knyga in self.knygos:
+#                 print(f"Pavadinimas: {knyga[ 'pavadinimas']}, Autorius: {knyga['autorius']}, Metai: {knyga['metai']}")
+# knigynas = Knygynas()
+# knigynas.prideti_knyga({'pavadinimas' : 'seslis', 'autorius': 'Zemaitis', 'metai': 1981})
+# ieskoma_knyga = knigynas.knygos_paieska('seslis')
+# if ieskoma_knyga:
+#     print(f'rasta knyga: {ieskoma_knyga["pavadinimas"]}')
+# else:
+#     print('knyga nerasta')
+# # knigynas.knygu_sarasas()
+#
+# Sukurkite klasę "Darbuotojas" (Employee), kuri turi atributus "vardas" (name), "pareigos" (position), ir "atlyginimas" (salary).
+# Parašykite metodus, kurie leidžia keisti darbuotojo pareigas ir atlyginimą;
+#
+# class Darbuotojas:
+#     def __init__(self, vardas, pareigos, atlyginimas):
+#         self.vardas = vardas
+#         self.pareigos = pareigos
+#         self.atlyginimas = atlyginimas
+#
+#     def pareigu_keitimas(self, naujos_pareigos):
+#         self.pareigos = naujos_pareigos
+#
+#     def atlyginimo_keitimas(self, naujas_atlyginimas):
+#         self.atlyginimas = naujas_atlyginimas
+#
+#
+# info1 = Darbuotojas("Petras", "elektrikas", 2000)
+#
+#
+# info1.pareigu_keitimas('Vadovas')
+# info1.atlyginimo_keitimas(3600)
+#
+# print(f" Darbuotojo vardas: {info1.vardas}, pakeistos pareigos{info1.pareigos()}, pakeistas atlyginimas{info1.atlyginimas()} Eur")
 
-    def ideti_preke(self, prekybinikas):
-        self.prekiu_sarasas.append(prekybininkas)
-    def pasalinti_preke(self, prekybinikas):
-        self.prekiu_sarasas.remove(prekybininkas)
+# 3. Sukurkite klasę "Skaičiuotuvas", kuri turi metodus "sudėti" (add), "atimti" (subtract), "dauginti" (multiply) ir "dalinti" (divide).
+# Šie metodai priima du skaičius ir atlieka atitinkamą matematinę operaciją.
+#
+# class Skaiciuotuvas:
+#     def __init__(self, sudeti, atimti, dauginti, dalinti):
+#         self.sudeti = sudeti
+#         self.atimti = atimti
+#         self.dauginti = dauginti
+#         self.dalinti = dalinti
+#
+#
+#     def dvieju_skaiciu_suma(self,number1, number2 ):
+#         self. sudeti  = number1+number2
+#         return
+#
+#     def dvieju_skaiciu_atimtis(self,number1, number2):
+#         self.atimti = number1 - number2
+#         return
+#
+#     def dvieju_skaiciu_daugyba(self, number1*number2):
+#         self.dauginti = number1 ** number2
+#         return multiply
+#
+#
+#     def dvieju_skaiciu_dalyba(self, divide):
+#         self.dalinti  /= divide
+#         return divide
+#
+#
+#
+# calculate = Skaiciuotuvas()
+#
+# s1 = 10
+# s2 = 5
+#
+# calculate = dvieju_skaiciu_suma {s1+s2}
+# calculate = dvieju_skaiciu_atimtis {s1-s2}
+# calculate = dvieju_skaiciu_daugyba {s1*s2}
+# calculate = dvieju_skaiciu_dalyba {s1/s2}
+#
+#
+#
+# sumos_rezultatas = calculate.dvieju_skaiciu_suma(s1, s2)
+# subtract_rezultatas = calculate.dvieju_skaiciu_atimtis(s1, s2)
+# multiply.rezultatas = calculate.dvieju_skaiciu_daugyba(s1, s2)
+# divide.rezultatas = calculate.dvieju_skaiciu_dalyba(s1,s2)
+#
+# print("Sum:", sum_result)
+# print("Subtraction:", subtract_result)
+# print("Multiplication:", multiply_result)
+# print("Division:", divide_result)
 
 
-prekiu_sarasas = Sarasas()
-prekybininkas1 = Prekybininkas('Petras','obuolys')
-prekybinikas2 = Prekybininkas('Saulius', 'kamuolys')
+# class Skaiciuotuvas:
+#     def add(self,a, b):
+#         return a+b
+#     def subtract(self, a, b):
+#         return a-b
+#     def multiply(self, a, b):
+#         return a*b
+#     def divide(self, a, b):
+#         if b == 0:
+#             return ("dalyba iš 0 negalima")
+#         else:
+#             return a/b
+#
+# a = 3
+# b = 2
+#
+# a1 = Skaiciuotuvas()
+# suma = a1.add(a, b)
+# skirtumas = a1.subtract(a,b)
+# sandauga = a1.multiply(a,b)
+# dalyba = a1.divide(a,b)
+#
+# print(f"{suma}, {skirtumas}, {sandauga}, {dalyba}")
 
-prekiu_sarasas.ideti_preke(prekybininkas1)
-prekiu_sarasas.pasalinti_preke(prekybinikas2)
+# Sukurkite klasę "Klase", kuri turės savybę "pavadinimas" ir sąrašą "pamokos" (pamokų pavadinimai ir laikas).
+# Sukurkite klasę "Mokykla", kuri turės sąrašą klasių.
+# Parašykite metodą, kuris išveda mokyklos tvarkaraštį su visomis pamokomis.
 
-for preke in prekiu_sarasas
-    
+# class Klase:
+#     def __init__(self, pavadinimas):
+#         self.pavadinimas = pamokos_pavadinimas
+#         self.pamokos = []
+#     def prideti_pamoka(self, pavadinimas, laikas):
+#         self.pamokos.append((pavadinimas, laikas))
+#
+#     def gauti_tvarkarasti(self):
+#         tvarkarastis = f"Klase: {self.pavadinimas} \n"
+#         for pamoka in self.pamokos:
+#             pavadinimas, laikas = pamoka
+#             tvarkarastis += f"- {pavadinimas}, laikas: {laikas} \n"
+#             return tvarkarastis
+# class Mokykla:
+#     def __init__(self, pavadinimas):
+#         self.pavadinimas = pavadinimas
+#         self.klases = []
+#
+#     def prideti_klase (self, klase):
+#         self.klases.append(klase)
+#
+#     def tvarkarastis_galutinis(self):
+#         galutinis = f"Mokykla: {self.pavadinimas} \n"
+#         for klase in self.klases:
+#             galutinis += klase.tvarkarastis()
+#         return galutinis
+#
+#
+#
+# Mokykla1 = Mokykla ("Vyduno gimnazija")
+#
+# klase1 = Klase("6 B")
+# klase1.prideti_pamoka("Lietuvių", "9:00")
+#
+# klase2 = Klase("1 E")
+# klase2.prideti_pamoka("Anglų", "10:00")
+#
+#
+# Mokykla1 = Mokykla("Vyduno gimnazija")
+#
+# Mokykla1.prideti_klase(klase1)
+# Mokykla1.prideti_klase(klase2)
+# tvarkarastis = mokykla.tvarkarastis_galutinis()
+#
+# print(mokykla.tvarkarastis_galutinis())
+
+# Sukurkite klasę "Žaislas", kuri turėtų savybes, tokias kaip "pavadinimas" ir "amžiaus rekomendacija".
+# Tada sukurkite klasę "Vaikas", kuri turėtų vardą ir amžių.
+# Tada sukurkite klasę "VaikasSuZaislu", kuri turėtų šio vaiko objektą ir žaislo objektą.
+# Patikrinkite, ar vaiko amžius atitinka žaislo amžiaus rekomendaciją.
+
+class Zaislas:
+    def __init__ (self, pavadinimas, amzius):
+        self.pavadinimas = pavadinimas
+        self.amzius = amzius
+
+class Vaikas:
+
+    def __init__ (self, vardas, amzius):
+        self.vardas = vardas
+        self.amzius = amzius
 
 
+class VaikasSuZaislu:
+
+    def __init__ (self, vaikas, zaislas):
+        self.zaislas = zaislas
+        self.vaikas = vaikas
+
+    def vaiko_amziaus_atitiktis(self):
+        if vaiko_amzius in self.amzius >= self.amzius(Zaislas):
+            print (f"zaislas atitinka amziaus")
+        else:
+            print (f"zaislas neatitinka amziaus")
 
 
+zaislas1 = Zaislas ('Roblox', 12)
+vaikas1 = Vaikas('Petriukas',10)
+vaikassuzaislu1 = VaikasSuZaislu('Petriukas', "Roblox")
 
-
-
-
+vaikassuzaislu1.vaiko_amziaus_atitiktis(zaislas1)
+print(vaikassuzaislu1.vaiko_amziaus_atitiktis())
 
