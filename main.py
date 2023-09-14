@@ -1409,36 +1409,192 @@ import string
 # Tada sukurkite klasę "Vaikas", kuri turėtų vardą ir amžių.
 # Tada sukurkite klasę "VaikasSuZaislu", kuri turėtų šio vaiko objektą ir žaislo objektą.
 # Patikrinkite, ar vaiko amžius atitinka žaislo amžiaus rekomendaciją.
+#
+# class Zaislas:
+#     def __init__ (self, pavadinimas, amzius):
+#         self.pavadinimas = pavadinimas
+#         self.amzius = amzius
+#
+# class Vaikas:
+#
+#     def __init__ (self, vardas, amzius):
+#         self.vardas = vardas
+#         self.amzius = amzius
+#
+#
+# class VaikasSuZaislu:
+#
+#     def __init__ (self, vaikas, zaislas):
+#         self.zaislas = zaislas
+#         self.vaikas = vaikas
+#
+#     def vaiko_amziaus_atitiktis(self):
+#         if self.vaikas.amzius >= self.zaislas.amzius:
+#             return f'{self.vaikas.vardas} gali zaisti su zaislu "{self.zaislas.pavadinimas}" '
+#         else:
+#             return f'{self.vaikas.vardas} negali zaisti su zaislu "{self.zaislas.pavadinimas}", nes turi paaugti '
+#
+# zaislas1 = Zaislas ('Roblox', 12)
+# vaikas1 = Vaikas('Petriukas',10)
+# vaikas_su_zaislu1 = VaikasSuZaislu(vaikas1, zaislas1)
+#
+# rezultatas = vaikas_su_zaislu1.vaiko_amziaus_atitiktis()
+# print(rezultatas)
 
-class Zaislas:
-    def __init__ (self, pavadinimas, amzius):
-        self.pavadinimas = pavadinimas
-        self.amzius = amzius
+# Sukurkite programą, kuri leidžia vartotojui valdyti krepšinio komandą.
+# Galite kurti klases, pvz., "Komanda", "Žaidėjas", "Treneris".
+# Kiekvienas žaidėjas turėtų turėti savo statistiką(taiklumas,pozicija),
+# o treneris - instrukcijas ir strategiją(komandos sudeti).
+# Programa turi leisti vartotojui pridėti naujus žaidėjus, juos treniruoti ir valdyti komandos sudeti.
 
-class Vaikas:
+# class Treneris:
+#     def __init__(self):
+#         self.strategija = "ataka"
+#     def keisti_strategija(self,nauja_strategija):
+#         self.strategija = nauja_strategija
+#
+#     def strategijos_info(self):
+#         return f'naudojama strategija {self.strategija}'
+# class Zaidejas:
+#     def __init__(self, pavarde, pozicija):
+#         self.pavarde = pavarde
+#         self.taiklumas = 30
+#         self.pozicija = pozicija
+#
+#     def upgrade(self):
+#         self.taiklumas += 5
+#         if self.taiklumas > 100:
+#             self.taiklumas = 100
+#
+#     def zaidejo_info(self):
+#         return f'{self.pavarde}, zaidejo pozicija {self.pozicija}, ir jo taiklumas {self.taiklumas}%'
+# class Komanda:
+#     def __init__(self, pavadinimas):
+#         self.komanda =[]
+#         self.pavadinimas = pavadinimas
+#         self.treneris = Treneris()
+#     def prideti_zaideja(self,zaidejas):
+#         self.komanda.append(zaidejas)
+#
+#     def isimti_zaideja(self, zaidejas):
+#         if zaidejas in self.komanda:
+#             self.komanda.remove(zaidejas)
+#     def komandos_informacija(self):
+#         print(f'{self.pavadinimas}, komandos zaidejai: ')
+#         for zaidejas in self.komanda:
+#             print(zaidejas.zaidejo_info())
+#     def strategijos_info(self):
+#         print (self.treneris.strategijos_info())
+#
+#     def pasirinkti_treneri(self, treneris):
+#         self.komanda.append(treneris)
+#
+#     def pakeisti_treneri(self, treneris):
+#         if treneris in self.komanda:
+#             self.komanda.remove(treneris)
+#
+# komanda=Komanda("Puseles")
+# zaidejas1=Zaidejas("Greitas", "puolejas")
+# zaidejas2=Zaidejas("didelis", "saugas")
+# zaidejas3=Zaidejas("vidutinis", "atsarginis")
+#
+# komanda.prideti_zaideja(zaidejas1)
+# komanda.prideti_zaideja(zaidejas2)
+# komanda.prideti_zaideja(zaidejas3)
+#
+# zaidejas1.upgrade()
+# zaidejas1.upgrade()
+# zaidejas3.upgrade()
+#
+# komanda.komandos_informacija()
+# komanda.strategijos_info()
 
-    def __init__ (self, vardas, amzius):
-        self.vardas = vardas
-        self.amzius = amzius
+    # DUomenu analitika
 
-
-class VaikasSuZaislu:
-
-    def __init__ (self, vaikas, zaislas):
-        self.zaislas = zaislas
-        self.vaikas = vaikas
-
-    def vaiko_amziaus_atitiktis(self):
-        if vaiko_amzius in self.amzius >= self.amzius(Zaislas):
-            print (f"zaislas atitinka amziaus")
-        else:
-            print (f"zaislas neatitinka amziaus")
-
-
-zaislas1 = Zaislas ('Roblox', 12)
-vaikas1 = Vaikas('Petriukas',10)
-vaikassuzaislu1 = VaikasSuZaislu('Petriukas', "Roblox")
-
-vaikassuzaislu1.vaiko_amziaus_atitiktis(zaislas1)
-print(vaikassuzaislu1.vaiko_amziaus_atitiktis())
-
+#
+#
+# import pandas as pd
+# import matplotlib.pyplot as plt
+#
+# # duomenys = {'Vardas': ['Jonas', 'Ieva', 'Petras', 'Ona'],
+# #             'Amzius': [25, 28, 22, 30]
+# #             }
+# # df = pd.DataFrame(duomenys)
+# # # print(df)
+# #
+# # jaunesni = df[df['Amzius'] < 25]
+# # # print(jaunesni)
+# #
+# # vidutinis_amzius = df['Amzius'].mean()
+# # print(f'Vidutinis amzius: {vidutinis_amzius}')
+#
+# # temperaturos = [24.5, 25.2, 23.8, 26.0, 22.5]
+# #
+# # sr = pd.Series(temperaturos)
+# #
+# # print(sr)
+#
+# # Mazejancia tvarka
+# # temperaturos = [24.5, 25.2, 23.8, 26.0, 22.5]
+# #
+# # sr = pd.Series(temperaturos)
+# # serija_rikiavimas = sr.sort_values()
+# #
+# # print(serija_rikiavimas)
+#
+# # Didejancia tvarka
+# # temperaturos = [24.5, 25.2, 23.8, 26.0, 22.5]
+# #
+# # sr = pd.Series(temperaturos)
+# # serija_rikiavimas = sr.sort_values(ascending = False)
+# #
+# # print(serija_rikiavimas)
+#
+# # temperaturos = [24.5, 25.2, 23.8, 26.0, 22.5]
+# # sr = pd.Series(temperaturos)
+# # print(f"pirmas elementas: {sr[0]}")
+#
+# # # # parodo tik vardus
+# # duomenys = {'Vardas': ['Jonas', 'Ieva', 'Petras', 'Ona'],
+# #             'Amzius': [25, 28, 22, 30]
+# #             }
+# # df = pd.DataFrame(duomenys)
+# # vardai = df['Vardas']
+# # print("Vardai: ")
+# # print(vardai)
+# # parodo vardus eilute
+# # duomenys = {'Vardas': ['Jonas', 'Ieva', 'Petras', 'Ona'],
+# #             'Amzius': [25, 28, 22, 30]
+# #             }
+# # df = pd.DataFrame(duomenys)
+# # # vardai = df['Vardas'].to_list()
+# # # print("Vardai: ")
+# # # print(vardai)
+#
+# # jeigu noretume prideti nauja stulpeli i savo DataFrame
+# # duomenys = {'Vardas': ['Jonas', 'Ieva', 'Petras', 'Ona'],
+# #             'Amzius': [25, 28, 22, 30]
+# #             }
+# # df['Lytis'] = [['Vyras', 'Moteris', 'Vyras', 'Moteris']]
+# # df = pd.DataFrame(duomenys)
+# # print('Atnaujintas dataframe dsu nauju stulpeliu: ')
+# # print(df)
+# duomenys = {'Vardas': ['Jonas', 'Ieva', 'Petras', 'Ona'],
+#             'Amzius': [25, 28, 22, 30]
+#             }
+# df = pd.DataFrame(duomenys)
+# vardai = df['Vardas']
+# print("Vardai: ")
+# print(vardai)
+#
+#
+# plt.figure(figsize=(8,5))
+# plt.bar(df['Vardas'], df['Amzius'], color='green')
+# plt.xlabel('Vardas')
+# plt.ylabel('Amzius')
+# plt.title('Amzius pagal vardus')
+#
+# plt.show()
+#
+# df.head(2)
+# df.tail()
